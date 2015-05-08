@@ -1,0 +1,29 @@
+{
+  "name": "gwilco",
+  "version": "1.0.0",
+  "description": "My portfolio/online CV",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Sam Gwilym",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.2.9",
+    "babel-jest": "^5.0.1",
+    "babel-loader": "^5.0.0",
+    "css-loader": "^0.12.0",
+    "jest-cli": "^0.4.0",
+    "jsx-loader": "^0.13.2",
+    "jsxstyle": "0.0.10",
+    "node-sass": "^2.1.1",
+    "react": "^0.13.2",
+    "react-a11y": "git://github.com/iam4x/react-a11y#packaged",
+    "react-hot-loader": "^1.2.6",
+    "sass-loader": "^0.6.0",
+    "style-loader": "^0.12.1",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
