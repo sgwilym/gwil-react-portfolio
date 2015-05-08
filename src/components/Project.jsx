@@ -25,7 +25,7 @@ export default class Project extends React.Component {
 
     let images = this.props.images.map((image, i) => {
       let className = (i == this.state.currentImage ? 'visible' : 'invisible');
-      let src = `../public/images/${image}`;
+      let src = require(`../../public/images/${image}`);
       return(
         <li className={className} key={i}><img src={src} /></li>
       );

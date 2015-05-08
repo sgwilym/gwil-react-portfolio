@@ -14,7 +14,7 @@ export default class QualityList extends React.Component {
 
     return(
       <ul className="quality-list">
-        <h2><ScaledImage scale={0.25} src={`../../public/images/${this.props.icon}.png`}/> {this.props.title}</h2>
+        <h2><ScaledImage scale={0.25} src={require(`../../public/images/${this.props.icon}.png`)}/> {this.props.title}</h2>
         {skills}
       </ul>
     );

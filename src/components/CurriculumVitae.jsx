@@ -21,7 +21,7 @@ export default class CurriculumVitae extends React.Component {
     let links = this.props.links.map((link) => {
       return(
         <li key={link.name}>
-          <a href={link.url}><ScaledImage scale={0.25} src={`../../public/images/${link.name}.png`}/></a>
+          <a href={link.url}><ScaledImage scale={0.25} src={require(`../../public/images/${link.name}.png`)}/></a>
         </li>
       );
     });
@@ -30,7 +30,7 @@ export default class CurriculumVitae extends React.Component {
       <section className="curriculum-vitae">
 
         <header>
-          <ScaledImage src={`../../public/images/${this.props.icon}`} scale={0.25}/>
+          <ScaledImage src={require(`../../public/images/${this.props.icon}`)} scale={0.25}/>
           <h1>{this.props.name}</h1>
           <p>{this.props.description}</p>
           <p className="working-on">{this.props.workingOn}</p>
@@ -42,7 +42,7 @@ export default class CurriculumVitae extends React.Component {
 
         <h2>
           <ScaledImage
-          scale={0.25} src="../../public/images/clients.png" />
+          scale={0.25} src={require("../../public/images/clients.png")} />
           Some clients
         </h2>
 
