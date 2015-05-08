@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "http://gwil.co/test/build/"
+    publicPath: "http://gwil.co/build/"
   },
   plugins: [
 		new webpack.optimize.DedupePlugin(),
