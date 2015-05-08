@@ -2,18 +2,21 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  target: "web",
-  entry: ["./src/index"],
+  devtool: 'eval',
+  entry: [
+    "webpack-dev-server/client?http://localhost:8080",
+    "webpack/hot/only-dev-server",
+    "./src/index"
+  ],
   output: {
-    path: path.join(__dirname, "build"),
+    path: path.join(__dirname, 'build'),
     filename: "bundle.js",
-    publicPath: "http://gwil.co/test/build/"
+    publicPath: '/build/'
   },
   plugins: [
-		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.UglifyJsPlugin()
-	],
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
@@ -21,7 +24,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel-loader'],
+        loaders: ['react-hot', 'babel-loader'],
         include: path.join(__dirname, 'src')
       },
       {
@@ -34,4 +37,4 @@ module.exports = {
       }
     ]
   }
-}
+};
