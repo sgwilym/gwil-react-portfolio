@@ -54,6 +54,8 @@ export default class CurriculumVitae extends React.Component {
           {links}
         </ul>
 
+        <p className="note">This portfolio is a React app! <a href="https://github.com/sgwilym/gwil-react-portfolio">Check it out on GitHub.</a></p>
+
       </section>
     )
   }

@@ -2,7 +2,7 @@
 @import 'utilities';
 @import 'media-queries';
 
-$small: 750px;
+$small: 760px;
 
 html {
   height: 100%;
@@ -188,5 +188,14 @@ ul.project-carousel {
   }
   @include max-screen($small) {
     @include prefix(column-break-after, auto);
+  }
+}
+
+p.note {
+  font-size: 0.7em;
+  margin: 2em 0 0 0;
+  a {
+    color: #3651b5;
+    text-decoration: none;
   }
 }
