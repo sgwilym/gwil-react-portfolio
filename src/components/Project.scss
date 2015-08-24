@@ -68,6 +68,8 @@
   }
   @media screen and (max-width: $small-screen-size) {
     column-break-after: auto;
+    -webkit-break-after: auto;
+    -moz-break-after: auto;
   }
 }
 
