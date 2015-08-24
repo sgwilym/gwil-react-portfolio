@@ -75,6 +75,14 @@ export default {
   ],
   portfolio: [
     {
+      title: "Relay for Visual Learners",
+      link: "http://sgwilym.github.io/relay-visual-learners/",
+      description: "It’s no secret that I’m a big fan of React, and Relay — a new data fetching framework for React apps — immediately caught my interest. However, initially I was a little overwhelmed by all of Relay’s moving parts, so I made this interactive diagram that represents the structure of Relay and GraphQL, with (hopefully) succinct explanations for each part of the diagram. And it’s made with React, of course.",
+      images: ["relay-visual-1.jpg", "relay-visual-2.jpg"],
+      color: "#ffffff",
+      bgColor: "#f26b00"
+    },
+    {
       title: "Comique",
       link: "http://comique.co",
       description: "Comique is a comic reader and store made specifically for small screens. It’s not just the app that’s made for mobile — it’s the comics too! Comique’s interface is built around letting our catalog’s personality shine through, with actions built around reader’s normal comic-reading gestures. I’m the programmer and designer for all aspects of Comique, from backend to iOS client. I’m currently working on Comique 2!",
