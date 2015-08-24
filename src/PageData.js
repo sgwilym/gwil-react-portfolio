@@ -35,6 +35,10 @@ export default {
       url: 'http://floorplanner.com'
     },
     {
+      name: 'Housing Anywhere',
+      url: 'http://housinganywhere.com'
+    },
+    {
       name: 'Firmhouse',
       url: 'http://firmhouse.com'
     },

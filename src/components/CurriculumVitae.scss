@@ -1,0 +1,81 @@
+@import '../shared/styles/layout.scss';
+
+.root {
+  $padding: 2.5em;
+  width: calc(25em - (#{$padding} * 2));
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  padding: $padding;
+  text-align: right;
+  @media screen and (max-width: $small-screen-size) {
+    text-align: left;
+    padding: 1em;
+  }
+}
+
+.header {
+  margin: 0 0 1.5em 0;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin: .25em 0;
+}
+
+.header p {
+  margin: 0 0 .5em 0;
+}
+
+.header img {
+  @media screen and (max-width: $small-screen-size) {
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+}
+
+.workingOn {
+  font-weight: bold;
+}
+
+.clientList {
+  composes: asideList from '../shared/styles/layout.scss';
+}
+
+.clientItem {
+  composes: asideListLineItem from '../shared/styles/layout.scss';
+}
+
+.links {
+  margin: 2em 0 0 0;
+  padding: 0;
+}
+
+.link {
+  display: inline-block;
+  margin: 0 0 0 .75em;
+  vertical-align: middle;
+  transition: all 100ms;
+  &:hover {
+    transform: scale(1.1, 1.1) rotate(9deg);
+  }
+}
+
+.subHeader {
+  composes: asideHeader from '../shared/styles/layout.scss';
+}
+
+.note {
+  font-size: 0.8em;
+  margin: 2em 0 0 0;
+  a {
+    color: #3651b5;
+    text-decoration: none;
+    transition: all 100ms;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}

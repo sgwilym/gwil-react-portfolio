@@ -1,0 +1,42 @@
+$small-screen-size: 760px;
+
+.asideHeader {
+  margin: 0 0 .3em 0;
+  img {
+    vertical-align: sub;
+    margin: 0 .2em 0 0;
+  }
+}
+
+.asideListLine {
+  list-style-type: none;
+}
+
+.asideList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.asideListLineItem {
+  display: inline-block;
+  &:after {
+    color: #bcbcbc;
+    content: '•';
+    margin: 0 .3em;
+  }
+  &:last-child {
+    &:after {
+      content: '';
+      margin: 0;
+    }
+  }
+  a {
+    color: #3651b5;
+    text-decoration: none;
+    transition: all 100ms;
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
+  }
+}

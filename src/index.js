@@ -1,9 +1,8 @@
 import React from 'react';
 import Page from './components/Page';
-import PageData from './PageData'
-require('../public/style/gwilco.scss');
+import PageData from './PageData';
 
 React.render(
-  <Page data={PageData} />,
+  <Page {...PageData} />,
   document.body
-)
+);

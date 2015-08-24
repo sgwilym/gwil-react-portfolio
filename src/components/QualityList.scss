@@ -1,0 +1,20 @@
+.root {
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+
+.heading {
+  composes: asideHeader from '../shared/styles/layout.scss';
+}
+
+.skills {
+  composes: asideList from '../shared/styles/layout.scss';
+}
+
+.skillSet {
+  composes: asideListLine from '../shared/styles/layout.scss';
+}
+
+.skill {
+  composes: asideListLineItem from '../shared/styles/layout.scss';
+}

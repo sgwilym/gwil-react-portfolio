@@ -9,30 +9,35 @@ export default class ScaledImage extends React.Component {
       width: 0,
       height: 0,
       loaded: false
-    }
+    };
 
     this.handleLoaded = this.handleLoaded.bind(this);
   }
 
   handleLoaded(e) {
+    const { scale } = this.props;
     var img = new Image();
     img.src = e.target.src;
-    let width = img.width * this.props.scale;
-    let height = img.height * this.props.scale;
 
-    let nextState = {
-      width,
-      height,
-      loaded: true
+    img.onload = () => {
+      const nextState = {
+        width: img.width * scale,
+        height: img.height * scale,
+        loaded: true
+      };
+
+      this.setState(nextState);
     };
-
-    this.setState(nextState);
   }
 
   render() {
-      return (
-        <img width={this.state.width} height={this.state.height} src={this.props.src} onLoad={this.handleLoaded}/>
-      );
+
+    const { width, height } = this.state;
+    const { src } = this.props;
+
+    return (
+      <img width={width} height={height} src={src} onLoad={this.handleLoaded}/>
+    );
   }
 
 }

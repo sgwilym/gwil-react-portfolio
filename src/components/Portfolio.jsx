@@ -1,26 +1,28 @@
 import React from 'react';
 import Project from './Project';
+import styles from './Portfolio.scss';
 
 export default class Portfolio extends React.Component {
 
   render() {
 
-    let work = this.props.portfolio.map(function (work, i) {
+    const workNodes = this.props.portfolio.map(function (work, i) {
       return(
         <Project
-        key={i}
-        title={work.title}
-        link={work.link}
-        description={work.description}
-        images={work.images}
-        color={work.color}
-        backgroundColor={work.bgColor}/>
+          key={i}
+          title={work.title}
+          link={work.link}
+          description={work.description}
+          images={work.images}
+          color={work.color}
+          backgroundColor={work.bgColor}
+        />
       );
     });
 
     return(
-      <ul className="portfolio">
-        {work}
+      <ul className={styles.root}>
+        {workNodes}
       </ul>
     );
   }

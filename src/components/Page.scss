@@ -1,0 +1,22 @@
+@import '../shared/styles/layout.scss';
+
+.root {
+  display: flex;
+  align-content: stretch;
+  font-size: 0.85em;
+  background: red;
+  background-color: #ffffff;
+  @media screen and (max-width: $small-screen-size) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.root h1, h2, h3, h4, h5 {
+  font-family: 'calluna-sans', sans-serif;
+  font-weight: 700;
+}
+
+.root p, .root li {
+  font-family: 'lato', sans-serif;
+}

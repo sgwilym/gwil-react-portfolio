@@ -1,4 +1,5 @@
 import React from 'react/addons';
+import styles from './Project.scss';
 
 export default class Project extends React.Component {
 
@@ -13,9 +14,9 @@ export default class Project extends React.Component {
   }
 
   handleClick() {
-    let newState = React.addons.update(this.state, {
+    const newState = React.addons.update(this.state, {
       currentImage: {$apply: (i) => {
-        return i < this.props.images.length - 1 ? i + 1 : 0
+        return i < this.props.images.length - 1 ? i + 1 : 0;
       }}
     });
     this.setState(newState);
@@ -23,33 +24,37 @@ export default class Project extends React.Component {
 
   render() {
 
-    let images = this.props.images.map((image, i) => {
-      let className = (i == this.state.currentImage ? 'visible' : 'invisible');
+    const { title, description, link, images, color, backgroundColor } = this.props;
+
+    const imageNodes = images.map((image, i) => {
+      let className = (i == this.state.currentImage ? styles.visibleSlide : styles.invisibleSlide );
       let src = require(`../../public/images/${image}`);
       return(
         <li className={className} key={i}><img src={src} /></li>
       );
     });
 
-    let style = {
+    const style = {
       color: this.props.color,
       backgroundColor: this.props.backgroundColor
     };
 
     return(
-      <article>
-        <ul className="project-carousel" onClick={this.handleClick}>
-          {images}
+      <article className={styles.root}>
+        <ul
+          className={styles.carousel}
+          onClick={this.handleClick}>
+          {imageNodes}
         </ul>
-        description = <div style={style} className="project-description">
-          <h2>{this.props.title}</h2>
-          <h3>
-            <a style={style} href={this.props.link}>{this.props.link}</a>
+        <div style={style} className={styles.projectDescription}>
+          <h2 className={styles.projectHeader}>{title}</h2>
+          <h3 className={styles.projectLink}>
+            <a style={style} href={link}>{link}</a>
           </h3>
-          <p>{this.props.description}</p>
+          <p className={styles.description}>{description}</p>
         </div>
       </article>
-    )
+    );
 
   }
 

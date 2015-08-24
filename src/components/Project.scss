@@ -1,0 +1,75 @@
+@import '../shared/styles/layout.scss';
+
+.root {
+  overflow: auto;
+  font-size: 0;
+  margin: 0 0 35px 0;
+}
+
+.carousel {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  &:before {
+    content: "";
+    display: block;
+    margin-top: 56%;
+  }
+}
+
+.slide {
+  transition: all 300ms;
+  width: 100%;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.visibleSlide {
+  composes: slide;
+  opacity: 1;
+}
+
+.invisibleSlide {
+  composes: slide;
+  opacity: 0;
+}
+
+.projectDescription {
+  columns: 4 13em;
+  color: #d9d9d9;
+  background-color: #2f2f2f;
+  padding: 1.5em;
+  font-size: 14px;
+}
+
+.projectHeader {
+  font-size: 1.5em;
+  margin: 0 0 0 0;
+}
+
+.projectLink {
+  margin: 0 0 .5em 0;
+  -webkit-column-break-after: always;
+  -webkit-page-break-after: always;
+  column-break-after: always;
+  page-break-after: always;
+  -moz-column-break-after: always;
+  -moz-page-break-after: always;
+  font-size: 1em;
+  a {
+    text-decoration: none;
+  }
+  @media screen and (max-width: $small-screen-size) {
+    column-break-after: auto;
+  }
+}
+
+.description {
+  margin: 0;
+}
