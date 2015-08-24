@@ -9,10 +9,10 @@ export default {
       icon: "hamburger",
       skills: [
         ["UX", "UI", "Responsive interfaces"],
-        ["JS", "React", "ES6",  "Flux", "Webpack"],
+        ["JS", "React", "ES2015",  "Flux", "Webpack"],
         ["Objective-C", "UIKit", "Core Data"],
         ["Ruby", "Sinatra", "Rails"],
-        ["Sass", "CSS Animations", "SVG Animation"]
+        ["CSS Modules", "Sass", "SVG Animation"]
       ]
     },
     {
