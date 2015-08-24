@@ -17,6 +17,9 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
+  postcss: [
+    require('autoprefixer-core')
+  ],
   module: {
     loaders: [
       {
@@ -25,8 +28,7 @@ module.exports = {
         include: path.join(__dirname, 'src')
       },
       {
-        test: /\.scss$/,
-        loader: "style!css!sass"
+        test: /\.scss$/, loaders: ['style-loader', 'css-loader?modules&importLoaders=2&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader!sass']
       },
       {
         test: /\.(png|jpg)$/,
