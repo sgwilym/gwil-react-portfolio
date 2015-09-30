@@ -66,7 +66,7 @@ export default {
     },
     {
       name: "tumblr",
-      url: "https://blog.gwil.co"
+      url: "http://blog.gwil.co"
     },
     {
       name: "miiverse",
