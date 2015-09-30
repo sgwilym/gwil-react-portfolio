@@ -30,7 +30,7 @@ export default class Project extends React.Component {
       let className = (i == this.state.currentImage ? styles.visibleSlide : styles.invisibleSlide );
       let src = require(`../../public/images/${image}`);
       return(
-        <li className={className} key={i}><img src={src} /></li>
+        <li className={className} key={i}><a><img src={src} /></a></li>
       );
     });
 

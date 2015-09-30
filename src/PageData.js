@@ -2,7 +2,7 @@ export default {
   name: "Sam Gwilym",
   icon: "sam.png",
   description: "Hello! I'm an artist, programmer and designer. My ambition is making fun, human software that entertains and informs. I like to grow things, to learn (and to learn about learning), and to be a genuinely helpful guy!",
-  workingOn: "I’m currently working on: Comique 2.",
+  workingOn: "I’m currently available for work!",
   qualities: [
     {
       title: "Full Stack Developer",
@@ -74,6 +74,14 @@ export default {
     }
   ],
   portfolio: [
+    {
+      title: "New Comique",
+      link: "http://new.comique.co",
+      description: "This is my app for publishing and reading small comics, Comique, rebuilt and redesigned from the ground up as a React app using Relay and a Rails based GraphQL server. This way it's accessible to anyone with a web browser, offers much improved functionality over the original, and looks great on big and small screens.",
+      images: ["new-comique-0.jpg", "new-comique-1.jpg", "new-comique-2.jpg", "new-comique-3.jpg"],
+      color: '#aab6da',
+      bgColor: '#f1f3f9'
+    },
     {
       title: "Relay for Visual Learners",
       link: "http://sgwilym.github.io/relay-visual-learners/",
